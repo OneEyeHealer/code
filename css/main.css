@@ -1,0 +1,21 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    overflow-x: hidden;
+}
+
+.code {
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, rgba(255, 161, 127, 0.342), rgba(0, 34, 62, 0.432)),
+        url(code.svg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.file-info a {
+    margin: 0 10px;
+}
