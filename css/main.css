@@ -2,11 +2,8 @@ html,
 body {
     margin: 0;
     padding: 0;
-    box-shadow: none;
+    box-shadow: inherit;
     overflow-x: hidden;
-}
-
-.code {
     min-height: 100vh;
     background-image: linear-gradient(to right top, rgba(255, 161, 127, 0.342), rgba(0, 34, 62, 0.432)),
         url(code.svg);
