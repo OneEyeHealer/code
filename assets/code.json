@@ -1,0 +1,34 @@
+[{
+        "data": {
+            "statement": "Sorting: Comparator",
+            "p": "",
+            "url": "https://www.hackerrank.com/challenges/ctci-comparator-sorting/problem?h_l=interview&playlist_slugs%5B%5D=virtusa",
+            "details": {
+                "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/comparator.py",
+                "code": "../asssets/source/comparator.py"
+            }
+        }
+    },
+    {
+        "data": {
+            "statement": "New Year Chaos",
+            "p": "",
+            "url": "https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays",
+            "details": {
+                "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/chaos.py",
+                "code": "../assets/source/chaos.py"
+            }
+        }
+    },
+    {
+        "data": {
+            "statement": "Count Triplets",
+            "p": "",
+            "url": "https://www.hackerrank.com/challenges/count-triplets-1/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps",
+            "details": {
+                "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/triplets.py",
+                "code": "../assets/source/triplets.py"
+            }
+        }
+    }
+]

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <header class="">
+  <header>
     <nav class="navbar navbar-light bg-light rounded-pill">
       <a class="navbar-brand" href="#">
         <img src="./assets/img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="code"
@@ -26,75 +26,82 @@
   <main>
     <section class="pt-4 w-100">
       <div class="container">
-        <h1 class="text-center">Code Titles</h1>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-          <!-- 1 -->
-          <div class="col my-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="">
-                  <img src="assets/img/logo.svg" class="d-inline-block align-center" alt="..." width="20" height="20" />
-                  <a
-                    href="https://www.hackerrank.com/challenges/ctci-comparator-sorting/problem?h_l=interview&playlist_slugs%5B%5D=virtusa">
-                    Sorting: Comparator
-                  </a>
-                </h5>
-                <div class="text-center file-info">
-                  <a href="https://github.com/OneEyeHealer/code/blob/master/assets/source/comparator.py"
-                    class="text-secondary" target="_blank"><i class="fab fa-github"></i> Github</a>
-                  <a href="./assets/source/comparator.py" class="text-success" target="_blank"><i
-                      class="fas fa-code"></i> Source Code</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- 2 -->
-          <div class="col my-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="">
-                  <img src="assets/img/logo.svg" class="d-inline-block align-center" alt="..." width="20" height="20" />
-                  <a
-                    href="https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays">
-                    New Year Chaos
-                  </a>
-                </h5>
-                <div class="text-center file-info">
-                  <a href="https://github.com/OneEyeHealer/code/blob/master/assets/source/chaos.py"
-                    class="text-secondary" target="_blank"><i class="fab fa-github"></i> Github</a>
-                  <a href="./assets/source/chaos.py" class="text-success" target="_blank"><i class="fas fa-code"></i>
-                    Source Code</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- 3 -->
-          <div class="col my-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="">
-                  <img src="assets/img/logo.svg" class="d-inline-block align-center" alt="..." width="20" height="20" />
-                  <a
-                    href="https://www.hackerrank.com/challenges/count-triplets-1/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps">
-                    Count Triplets
-                  </a>
-                </h5>
-                <div class="text-center file-info">
-                  <a href="https://github.com/OneEyeHealer/code/blob/master/assets/source/triplets.py"
-                    class="text-secondary" target="_blank"><i class="fab fa-github"></i> Github</a>
-                  <a href="./assets/source/triplets.py" class="text-success" target="_blank"><i class="fas fa-code"></i>
-                    Source Code</a>
-                  <a href="https://github.com/OneEyeHealer/code/blob/master/assets/source/doc/triplets.md"
-                    class="text-info" target="_blank"><i
-                      class="far fa-file-alt"></i> Doc</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h1 class="text-center text-light">Code List</h1>
+        <div id="myData" class="row row-cols-1 row-cols-md-2, row-cols-lg-3"></div>
       </div>
     </section>
   </main>
+  <script>
+    fetch("./assets/code.json")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+        appendData(data);
+      })
+      .catch(function (err) {
+        console.log("error: " + err);
+      });
+
+    function appendData(data) {
+      var mainContainer = document.getElementById("myData");
+      for (var i = 0; i < data.length; i++) {
+        // crating dom elements
+        var div = document.createElement("div");
+        var card = document.createElement("div");
+        var image = document.createElement("img");
+        var card_body = document.createElement("div");
+        var heading = document.createElement("h5");
+        var anchor = document.createElement("a");
+        var para = document.createElement("p");
+        var file_info = document.createElement("div");
+
+        // styling
+        div.classList.add("col", "mb-4");
+        card.classList.add("card");
+        image.classList.add("d-inline-block", "mr-2", "logo");
+        card_body.classList.add("card-body", 'text-align', "mx-auto");
+        heading.classList.add("card-title", "d-inline-block");
+        para.classList.add("card-text");
+        file_info.classList.add("file-info", "text-center");
+        // fetching data
+        heading.innerHTML = data[i].data.statement;
+        // para.innerHTML = data[i].data.p;
+        //   seting values
+        image.src = './assets/img/logo.svg';
+        image.setAttribute("width", "25");
+        anchor.href = data[i].data.url;
+
+        // appending created dom elements.
+        mainContainer.append(div);
+        div.append(card);
+        card.append(card_body);
+        card_body.appendChild(image);
+        card_body.appendChild(anchor);
+        anchor.append(heading);
+        // card_body.appendChild(para);
+        for (let [key, value] of Object.entries(data[i].data.details)) {
+          let classes = "";
+          let icon = "";
+          classes += key === "github" ? "text-secondary" : "text-success";
+          icon +=
+            key === "github" ?
+            `<i class="fab fa-github" aria-hidden="true"></i>` :
+            `<i class="fas fa-code"; aria-hidden="true"></i>`;
+          var links = document.createElement("a");
+          var span = document.createElement("span");
+          links.href = value;
+          links.setAttribute("target", "_blank");
+          links.classList.add("px-3", classes);
+          span.innerHTML = icon + " " + key;
+          card_body.append(file_info);
+          file_info.appendChild(links);
+          links.appendChild(span);
+        }
+      }
+    }
+  </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>
