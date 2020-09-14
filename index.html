@@ -27,7 +27,7 @@
     <section class="pt-4 w-100">
       <div class="container">
         <h1 class="text-center text-light">Code List</h1>
-        <div id="myData" class="row row-cols-1 row-cols-md-2, row-cols-lg-3"></div>
+        <div id="myData" class="row row-cols-1 row-cols-md-2 row-cols-xl-3"></div>
       </div>
     </section>
   </main>
@@ -37,7 +37,6 @@
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
         appendData(data);
       })
       .catch(function (err) {
@@ -61,7 +60,7 @@
         div.classList.add("col", "mb-4");
         card.classList.add("card");
         image.classList.add("d-inline-block", "mr-2", "logo");
-        card_body.classList.add("card-body", 'text-align', "mx-auto");
+        card_body.classList.add("card-body", 'text-align');
         heading.classList.add("card-title", "d-inline-block");
         para.classList.add("card-text");
         file_info.classList.add("file-info", "text-center");
