@@ -5,7 +5,8 @@
             "url": "https://www.hackerrank.com/challenges/ctci-comparator-sorting/problem?h_l=interview&playlist_slugs%5B%5D=virtusa",
             "details": {
                 "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/comparator.py",
-                "code": "../asssets/source/comparator.py"
+                "code": "../asssets/source/comparator.py",
+                "README": ""
             }
         }
     },
@@ -27,7 +28,20 @@
             "url": "https://www.hackerrank.com/challenges/count-triplets-1/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps",
             "details": {
                 "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/triplets.py",
-                "code": "../assets/source/triplets.py"
+                "code": "../assets/source/triplets.py",
+                "README": "https://github.com/OneEyeHealer/code/blob/master/assets/source/doc/triplets.md"
+            }
+        }
+    },
+    {
+        "data": {
+            "statement": "Sherlock and the Valid String",
+            "p": "",
+            "url": "https://www.hackerrank.com/challenges/sherlock-and-valid-string/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings",
+            "details": {
+                "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/sherlockValidation.py",
+                "code": "../assets/source/sherlockValidation.py",
+                "README": "https://github.com/OneEyeHealer/code/blob/master/assets/source/doc/sherlockValidation.md"
             }
         }
     }

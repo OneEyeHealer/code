@@ -16,3 +16,8 @@ body {
 .file-info a {
     margin: 0 10px;
 }
+
+.iconPos i{
+    position: relative;
+    top: 2px;
+}

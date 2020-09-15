@@ -1,11 +1,11 @@
 # Alternate Approach
 
- Geometic Progration
->$i = a,_\ j = ar,_\ k = ar^2$ 
->$where _\ (i<j<k)$
+### Geometic Progration
+>i = a, j = ar, k = ar<sup>2</sup>, &nbsp; &nbsp;where ( i < j < k )
 
-## Time complexity
-> $ order(n^3)$
+
+### Time complexity
+> O( n<sup>3</sup> )
 
 ```python
 # pseudo code approach
@@ -51,11 +51,10 @@ def triplets(arr, r):
 
 # Yet another approach with better time complexity
  Geometic Progration
->$i = a/r,_\ j = a,_\ k = ar$ 
->$where _\ (i<j<k)$
+>i = a/r, j = a, k = ar &nbsp;&nbsp; where ( i < j < k )
 
 ## Time complexity
->$ order(n)$
+>O( n )
 ```python
 # Hasmap and Dictionary Data structure is used.
 left_c = 0

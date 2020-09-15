@@ -16,7 +16,7 @@
 <body>
   <header>
     <nav class="navbar navbar-light bg-light rounded-pill">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="http://oneeyehealer.github.io/">
         <img src="./assets/img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="code"
           loading="lazy" />
         Code
@@ -31,76 +31,7 @@
       </div>
     </section>
   </main>
-  <script>
-    fetch("./assets/code.json")
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        appendData(data);
-      })
-      .catch(function (err) {
-        console.log("error: " + err);
-      });
-
-    function appendData(data) {
-      var mainContainer = document.getElementById("myData");
-      for (var i = 0; i < data.length; i++) {
-        // crating dom elements
-        var div = document.createElement("div");
-        var card = document.createElement("div");
-        var image = document.createElement("img");
-        var card_body = document.createElement("div");
-        var heading = document.createElement("h5");
-        var anchor = document.createElement("a");
-        var para = document.createElement("p");
-        var file_info = document.createElement("div");
-
-        // styling
-        div.classList.add("col", "mb-4");
-        card.classList.add("card");
-        image.classList.add("d-inline-block", "mr-2", "logo");
-        card_body.classList.add("card-body", 'text-align');
-        heading.classList.add("card-title", "d-inline-block");
-        para.classList.add("card-text");
-        file_info.classList.add("file-info", "text-center");
-        // fetching data
-        heading.innerHTML = data[i].data.statement;
-        // para.innerHTML = data[i].data.p;
-        //   seting values
-        image.src = './assets/img/logo.svg';
-        image.setAttribute("width", "25");
-        anchor.href = data[i].data.url;
-
-        // appending created dom elements.
-        mainContainer.append(div);
-        div.append(card);
-        card.append(card_body);
-        card_body.appendChild(image);
-        card_body.appendChild(anchor);
-        anchor.append(heading);
-        // card_body.appendChild(para);
-        for (let [key, value] of Object.entries(data[i].data.details)) {
-          let classes = "";
-          let icon = "";
-          classes += key === "github" ? "text-secondary" : "text-success";
-          icon +=
-            key === "github" ?
-            `<i class="fab fa-github" aria-hidden="true"></i>` :
-            `<i class="fas fa-code"; aria-hidden="true"></i>`;
-          var links = document.createElement("a");
-          var span = document.createElement("span");
-          links.href = value;
-          links.setAttribute("target", "_blank");
-          links.classList.add("px-3", classes);
-          span.innerHTML = icon + " " + key;
-          card_body.append(file_info);
-          file_info.appendChild(links);
-          links.appendChild(span);
-        }
-      }
-    }
-  </script>
+  <script src="./js/index.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>
