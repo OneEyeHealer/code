@@ -44,5 +44,16 @@
                 "README": "https://github.com/OneEyeHealer/code/blob/master/assets/source/doc/sherlockValidation.md"
             }
         }
+    }, {
+        "data": {
+            "statement": "Fraudulent Activity Notifications",
+            "p": "",
+            "url": "https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem?isFullScreen=false",
+            "details": {
+                "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/fraudulentNotification.py",
+                "code": "../assets/source/fraudulentNotification.py",
+                "README": "https://github.com/OneEyeHealer/code/blob/master/assets/source/doc/fraudulentNotification.md"
+            }
+        }
     }
 ]
