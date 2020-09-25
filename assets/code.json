@@ -4,9 +4,8 @@
             "p": "",
             "url": "https://www.hackerrank.com/challenges/ctci-comparator-sorting/problem?h_l=interview&playlist_slugs%5B%5D=virtusa",
             "details": {
-                "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/comparator.py",
-                "code": "../asssets/source/comparator.py",
-                "README": ""
+                "Github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/comparator.py",
+                "Download": "../asssets/source/comparator.py"
             }
         }
     },
@@ -16,8 +15,8 @@
             "p": "",
             "url": "https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays",
             "details": {
-                "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/chaos.py",
-                "code": "../assets/source/chaos.py"
+                "Github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/chaos.py",
+                "Download": "../assets/source/chaos.py"
             }
         }
     },
@@ -27,8 +26,8 @@
             "p": "",
             "url": "https://www.hackerrank.com/challenges/count-triplets-1/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps",
             "details": {
-                "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/triplets.py",
-                "code": "../assets/source/triplets.py",
+                "Github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/triplets.py",
+                "Download": "../assets/source/triplets.py",
                 "README": "https://github.com/OneEyeHealer/code/blob/master/assets/source/doc/triplets.md"
             }
         }
@@ -39,8 +38,8 @@
             "p": "",
             "url": "https://www.hackerrank.com/challenges/sherlock-and-valid-string/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings",
             "details": {
-                "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/sherlockValidation.py",
-                "code": "../assets/source/sherlockValidation.py",
+                "Github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/sherlockValidation.py",
+                "Download": "../assets/source/sherlockValidation.py",
                 "README": "https://github.com/OneEyeHealer/code/blob/master/assets/source/doc/sherlockValidation.md"
             }
         }
@@ -50,9 +49,19 @@
             "p": "",
             "url": "https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem?isFullScreen=false",
             "details": {
-                "github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/fraudulentNotification.py",
-                "code": "../assets/source/fraudulentNotification.py",
+                "Github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/fraudulentNotification.py",
+                "Download": "../assets/source/fraudulentNotification.py",
                 "README": "https://github.com/OneEyeHealer/code/blob/master/assets/source/doc/fraudulentNotification.md"
+            }
+        }
+    }, {
+        "data": {
+            "statement": "Pairs Having Similar Elements",
+            "p": "",
+            "url": "https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem?isFullScreen=false",
+            "details": {
+                "Github": "https://github.com/OneEyeHealer/code/blob/master/assets/source/twoPairsElements.py",
+                "Download": "../assets/source/twoPairsElements.py"
             }
         }
     }

@@ -19,9 +19,20 @@ body {
 
 .iconPos i {
     position: relative;
-    top: 2px;
+    top: 0px;
+}
+.logo{
+    font-size: 14px;
+    position: relative;
+    top: -8px
 }
 
-/* h5 {
-    font-size: 1rem !important;
-} */
+.title-anchor{
+    display:inline-flex !important
+}
+
+@media only screen and (max-width: 376px){
+    a{
+        display: flex !important;
+    }
+}

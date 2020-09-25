@@ -27,6 +27,7 @@ function appendData(data) {
         card.classList.add("card");
         image.classList.add("d-inline-block", "mr-2", "logo");
         card_body.classList.add("card-body", 'text-align');
+        anchor.classList.add("title-anchor")
         heading.classList.add("card-title", "d-inline-block");
         para.classList.add("card-text");
         file_info.classList.add("file-info", "text-center");
@@ -42,8 +43,9 @@ function appendData(data) {
         mainContainer.append(div);
         div.append(card);
         card.append(card_body);
-        card_body.appendChild(image);
+        // card_body.appendChild(image);
         card_body.appendChild(anchor);
+        anchor.appendChild(image);
         anchor.append(heading);
         // card_body.appendChild(para);
         for (let [key, value] of Object.entries(data[i].data.details)) {
@@ -51,12 +53,12 @@ function appendData(data) {
             let icon = "";
             //   classes += key === "github" ? "text-secondary" : "text-success";
             //  text-colors
-            if (key === "github") classes += "text-secondary";
-            else if (key === "code") classes += "text-success";
+            if (key === "Github") classes += "text-secondary";
+            else if (key === "Download") classes += "text-success";
             else classes += "text-info";
             // icons
-            if (key === "github") icon += `<i class="fab fa-github" aria-hidden="true"></i>`;
-            else if (key === "code") icon += `<i class="fas fa-code"; aria-hidden="true"></i>`;
+            if (key === "Github") icon += `<i class="fab fa-github" aria-hidden="true"></i>`;
+            else if (key === "Download") icon += `<i class="fas fa-file-download"; aria-hidden="true"></i>`;
             else icon += `<i class="fab fa-readme"></i>`;
             //   icon +=
             //     key === "github" ?
